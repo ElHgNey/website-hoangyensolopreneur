@@ -8,11 +8,11 @@ export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    setIsDark(document.getElementById("radar-root")?.classList.contains("dark") ?? false);
+    setIsDark(document.getElementById("blog-root")?.classList.contains("dark") ?? false);
   }, []);
 
   function toggle() {
-    const root = document.getElementById("radar-root");
+    const root = document.getElementById("blog-root");
     if (!root) return;
     const next = !isDark;
     setIsDark(next);

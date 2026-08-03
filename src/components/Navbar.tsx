@@ -15,7 +15,7 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const pathname = usePathname();
-  const onRadar = pathname?.startsWith("/radar") ?? false;
+  const onRadar = pathname?.startsWith("/blog") ?? false;
   const [activeId, setActiveId] = useState("about");
 
   const { user, loading, signInWithEmail, signOut } = useAuth();
@@ -81,20 +81,20 @@ export default function Navbar() {
             </a>
           ))}
           <Link
-            href="/radar"
+            href="/blog"
             className={`font-grotesk text-sm font-semibold uppercase tracking-wider transition-all duration-300 ${
               onRadar
                 ? "border-b-2 border-onyx pb-1 text-onyx"
                 : "text-muted hover:text-onyx"
             }`}
           >
-            Radar
+            Blog
           </Link>
 
           {onRadar && (
             <div className="flex items-center gap-4 border-l border-subtle/30 pl-6">
               <Link
-                href="/radar/my-notes"
+                href="/blog/my-notes"
                 className="font-grotesk text-sm font-semibold text-muted transition-colors hover:text-onyx"
               >
                 My Notes

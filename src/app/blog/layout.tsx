@@ -5,7 +5,7 @@ export default function RadarLayout({ children }: { children: React.ReactNode })
   return (
     <>
       <Navbar />
-      <div id="radar-root" className="min-h-screen bg-radar-bg pt-[97px] dark:bg-black">
+      <div id="blog-root" className="min-h-screen bg-radar-bg pt-[97px] dark:bg-black">
         <ThemeInit />
         {children}
       </div>

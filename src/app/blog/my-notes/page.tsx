@@ -85,7 +85,7 @@ export default function MyNotesPage() {
                 className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900"
               >
                 <Link
-                  href={`/radar/paper/${note.paper_id}`}
+                  href={`/blog/paper/${note.paper_id}`}
                   className="font-semibold text-zinc-900 hover:underline dark:text-zinc-50"
                 >
                   {note.papers?.title ?? "Paper"}

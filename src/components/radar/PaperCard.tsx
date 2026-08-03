@@ -19,7 +19,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
     <div className="flex flex-wrap items-start justify-between gap-4 border-b border-zinc-200 py-5 last:border-b-0 dark:border-zinc-800">
       <div className="min-w-0 flex-1">
         <Link
-          href={`/radar/paper/${paper.id}`}
+          href={`/blog/paper/${paper.id}`}
           className="font-serif text-lg font-semibold leading-snug text-zinc-900 hover:underline dark:text-zinc-50"
         >
           {paper.title}
@@ -55,7 +55,7 @@ export default function PaperCard({ paper }: { paper: Paper }) {
       </div>
 
       <Link
-        href={`/radar/paper/${paper.id}`}
+        href={`/blog/paper/${paper.id}`}
         className="shrink-0 whitespace-nowrap font-grotesk text-sm font-semibold text-radar-terracotta hover:text-radar-terracotta-dark"
       >
         Chi tiết →
