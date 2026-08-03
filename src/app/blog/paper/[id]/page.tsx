@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { scoreBadgeClass, formatDate } from "@/lib/paperFormat";
-import MyNoteEditor from "@/components/radar/MyNoteEditor";
 
 type Paper = {
   id: string;
@@ -144,8 +143,6 @@ export default function PaperDetail() {
                 Mở paper gốc
               </a>
             )}
-
-            <MyNoteEditor paperId={paper.id} />
           </article>
         )}
       </div>

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import PaperCard from "@/components/radar/PaperCard";
 import FilterBar, { type Filters } from "@/components/radar/FilterBar";
-import StatsCharts from "@/components/radar/StatsCharts";
 
 type Paper = {
   id: string;
@@ -139,8 +138,6 @@ export default function Home() {
   return (
     <div className="min-h-screen px-4 py-10 sm:px-8">
       <div className="mx-auto max-w-5xl">
-        <StatsCharts />
-
         <FilterBar
           filters={filters}
           onChange={setFilters}
