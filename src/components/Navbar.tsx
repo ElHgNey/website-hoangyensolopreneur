@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const NAV_ITEMS = [
   { id: "about", label: "Overview" },
@@ -48,6 +49,12 @@ export default function Navbar() {
               {label}
             </a>
           ))}
+          <Link
+            href="/radar"
+            className="font-grotesk text-sm font-semibold uppercase tracking-wider text-muted transition-all duration-300 hover:text-onyx"
+          >
+            Radar
+          </Link>
         </div>
         <a
           href="#contact"
