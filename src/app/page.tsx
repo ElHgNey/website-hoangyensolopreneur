@@ -124,7 +124,7 @@ export default function Home() {
         {/* Hero */}
         <section
           id="about"
-          className="hero-gradient relative flex min-h-[85vh] items-center overflow-hidden"
+          className="hero-gradient relative flex min-h-[85vh] scroll-mt-24 items-center overflow-hidden"
         >
           <div className="mx-auto grid max-w-[1280px] items-center gap-16 px-5 py-20 md:grid-cols-2 md:px-16">
             <div className="z-10">
@@ -167,7 +167,7 @@ export default function Home() {
         </section>
 
         {/* Expertise */}
-        <section id="expertise" className="bg-paper py-20">
+        <section id="expertise" className="scroll-mt-24 bg-paper py-20">
           <div className="mx-auto max-w-[1280px] px-5 md:px-16">
             <div className="mb-20 max-w-3xl">
               <span className="mb-4 block font-grotesk text-sm font-semibold uppercase tracking-[0.2em] text-muted">
@@ -219,7 +219,7 @@ export default function Home() {
         </section>
 
         {/* Strategic Impact */}
-        <section id="impact" className="overflow-hidden py-20">
+        <section id="impact" className="scroll-mt-24 overflow-hidden py-20">
           <div className="mx-auto max-w-[1280px] px-5 md:px-16">
             <div className="mb-20 max-w-3xl">
               <span className="mb-4 block font-grotesk text-sm font-semibold uppercase tracking-[0.2em] text-muted">
@@ -312,7 +312,7 @@ export default function Home() {
         {/* Contact / CTA */}
         <section
           id="contact"
-          className="border-t border-subtle/20 bg-paper py-20"
+          className="scroll-mt-24 border-t border-subtle/20 bg-paper py-20"
         >
           <div className="mx-auto max-w-[1280px] px-5 text-center md:px-16">
             <h2 className="mx-auto mb-10 max-w-4xl font-grotesk text-[28px] font-extrabold leading-tight tracking-[-0.02em] text-onyx md:text-[64px]">

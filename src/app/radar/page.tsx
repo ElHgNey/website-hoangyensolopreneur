@@ -137,7 +137,7 @@ export default function Home() {
   }, [filters]);
 
   return (
-    <div className="min-h-screen bg-zinc-50 px-4 py-10 dark:bg-black sm:px-8">
+    <div className="min-h-screen px-4 py-10 sm:px-8">
       <div className="mx-auto max-w-5xl">
         <StatsCharts />
 
@@ -166,7 +166,7 @@ export default function Home() {
         )}
 
         {!error && papers !== null && papers.length > 0 && (
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="rounded-xl border border-zinc-200 bg-white px-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             {papers.map((paper) => (
               <PaperCard key={paper.id} paper={paper} />
             ))}

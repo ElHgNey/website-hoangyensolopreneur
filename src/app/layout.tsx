@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
+import HashScrollHandler from "@/components/HashScrollHandler";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin", "vietnamese"],
@@ -36,7 +37,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-serif antialiased">{children}</body>
+      <body className="font-serif antialiased">
+        <HashScrollHandler />
+        {children}
+      </body>
     </html>
   );
 }

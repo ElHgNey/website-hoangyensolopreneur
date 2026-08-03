@@ -3,15 +3,15 @@
 import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 function colorForScore(score: number) {
-  if (score >= 8) return "#10b981"; // emerald-500, matches score-badge color for >=8
-  if (score >= 6) return "#f59e0b"; // amber-500, matches score-badge color for 6-8
-  return "#a1a1aa"; // zinc-400, matches score-badge color for <6
+  if (score >= 7) return "#2fa66a"; // green: strong match
+  if (score >= 4) return "#eda13c"; // amber: medium match
+  return "#e6543f"; // red: weak match
 }
 
 export default function ScoreDistributionChart({ data }: { data: { score: number; count: number }[] }) {
   return (
-    <div className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
-      <h3 className="mb-3 text-sm font-semibold text-zinc-700 dark:text-zinc-300">
+    <div className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+      <h3 className="mb-3 font-serif text-base font-semibold text-zinc-800 dark:text-zinc-200">
         Phân bố điểm AI
       </h3>
       <ResponsiveContainer width="100%" height={220}>

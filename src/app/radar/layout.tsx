@@ -7,7 +7,7 @@ export default function RadarLayout({ children }: { children: React.ReactNode })
   return (
     <AuthProvider>
       <Navbar />
-      <div id="radar-root" className="font-grotesk min-h-screen pt-[97px]">
+      <div id="radar-root" className="min-h-screen bg-radar-bg pt-[97px] dark:bg-black">
         <ThemeInit />
         <RadarHeader />
         {children}

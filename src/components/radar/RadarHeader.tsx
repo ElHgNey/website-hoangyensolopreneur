@@ -30,11 +30,14 @@ export default function RadarHeader() {
   return (
     <header className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-black">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-y-2 px-4 py-4 sm:px-8">
-        <Link href="/radar" className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+        <Link
+          href="/radar"
+          className="font-serif text-2xl font-bold text-zinc-900 dark:text-zinc-50"
+        >
           Radar nghiên cứu
         </Link>
 
-        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+        <div className="flex flex-wrap items-center gap-3 font-grotesk sm:gap-4">
           <Link
             href="/radar/my-notes"
             className="text-sm text-zinc-600 hover:underline dark:text-zinc-400"
@@ -62,7 +65,7 @@ export default function RadarHeader() {
               <button
                 type="button"
                 onClick={() => setShowForm((s) => !s)}
-                className="rounded-lg bg-zinc-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+                className="rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
               >
                 Đăng nhập
               </button>

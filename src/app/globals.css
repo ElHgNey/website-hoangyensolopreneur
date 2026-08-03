@@ -13,6 +13,16 @@
   --color-paper: #ffffff;
   --font-grotesk: var(--font-hanken-grotesk), system-ui, sans-serif;
   --font-serif: var(--font-source-serif-4), Georgia, serif;
+
+  /* Radar section: warm cream + terracotta palette, distinct from the
+     onyx/emerald corporate palette used on the rest of the site. */
+  --color-radar-bg: #fdf1ea;
+  --color-radar-card: #ffffff;
+  --color-radar-terracotta: #b5652d;
+  --color-radar-terracotta-dark: #96521f;
+  --color-radar-red: #e6543f;
+  --color-radar-amber: #eda13c;
+  --color-radar-green: #2fa66a;
 }
 
 html {

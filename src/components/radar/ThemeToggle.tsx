@@ -25,7 +25,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label="Đổi giao diện sáng/tối"
-      className="rounded-lg border border-zinc-300 px-2.5 py-1.5 text-sm text-zinc-600 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-300 text-sm text-zinc-600 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
     >
       {isDark ? "☀️" : "🌙"}
     </button>
