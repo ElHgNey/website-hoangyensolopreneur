@@ -167,6 +167,13 @@ export default function Home() {
 
         {!error && papers !== null && papers.length > 0 && (
           <div className="rounded-xl border border-zinc-200 bg-white px-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="grid grid-cols-[auto_1fr_auto_auto_auto] items-center gap-4 border-b border-zinc-200 py-3 font-grotesk text-xs font-semibold uppercase tracking-wide text-zinc-400 dark:border-zinc-800 dark:text-zinc-500">
+              <span />
+              <span>Tiêu đề &amp; tóm tắt</span>
+              <span>Điểm AI</span>
+              <span>Ngày</span>
+              <span />
+            </div>
             {papers.map((paper) => (
               <PaperCard key={paper.id} paper={paper} />
             ))}

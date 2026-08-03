@@ -25,7 +25,7 @@ export default function TopSourcesChart({ data }: { data: { source: string; coun
           <Tooltip
             contentStyle={{ fontSize: 12, borderRadius: 8, border: "1px solid #e4e4e7" }}
           />
-          <Bar dataKey="count" fill="#b5652d" radius={[0, 4, 4, 0]} isAnimationActive={false} />
+          <Bar dataKey="count" fill="#3b82f6" radius={[0, 4, 4, 0]} isAnimationActive={false} />
         </BarChart>
       </ResponsiveContainer>
     </div>

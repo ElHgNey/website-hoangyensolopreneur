@@ -1,3 +1,5 @@
+import { topicDisplayLabel } from "@/lib/topicFormat";
+
 type Topic = { id: string; name: string };
 
 export type Filters = {
@@ -32,7 +34,7 @@ export default function FilterBar({ filters, onChange, topics, sources, years }:
             <option value="">Tất cả chủ đề</option>
             {topics.map((t) => (
               <option key={t.id} value={t.id}>
-                {t.name}
+                {topicDisplayLabel(t.name)}
               </option>
             ))}
           </select>

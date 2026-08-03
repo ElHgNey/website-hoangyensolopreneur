@@ -16,7 +16,7 @@ export default function PapersPerWeekChart({ data }: { data: { week: string; cou
           <Tooltip
             contentStyle={{ fontSize: 12, borderRadius: 8, border: "1px solid #e4e4e7" }}
           />
-          <Bar dataKey="count" fill="#b5652d" radius={[4, 4, 0, 0]} isAnimationActive={false} />
+          <Bar dataKey="count" fill="#3b82f6" radius={[4, 4, 0, 0]} isAnimationActive={false} />
         </BarChart>
       </ResponsiveContainer>
     </div>
