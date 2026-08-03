@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
   { id: "about", label: "Overview" },
@@ -11,9 +12,13 @@ const NAV_ITEMS = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const onRadar = pathname?.startsWith("/radar") ?? false;
   const [activeId, setActiveId] = useState("about");
 
   useEffect(() => {
+    if (onRadar) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,21 +32,24 @@ export default function Navbar() {
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, []);
+  }, [onRadar]);
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-subtle/20 bg-surface/90 backdrop-blur-md">
       <div className="mx-auto flex h-24 max-w-[1280px] items-center justify-between px-5 md:px-16">
-        <div className="font-grotesk text-2xl font-bold tracking-tighter text-onyx">
+        <Link
+          href="/"
+          className="font-grotesk text-2xl font-bold tracking-tighter text-onyx"
+        >
           Michelle Le (Hoàng Yến)
-        </div>
+        </Link>
         <div className="hidden items-center gap-10 md:flex">
           {NAV_ITEMS.map(({ id, label }) => (
             <a
               key={id}
-              href={`#${id}`}
+              href={`/#${id}`}
               className={`font-grotesk text-sm font-semibold uppercase tracking-wider transition-all duration-300 ${
-                activeId === id
+                !onRadar && activeId === id
                   ? "border-b-2 border-onyx pb-1 text-onyx"
                   : "text-muted hover:text-onyx"
               }`}
@@ -51,13 +59,17 @@ export default function Navbar() {
           ))}
           <Link
             href="/radar"
-            className="font-grotesk text-sm font-semibold uppercase tracking-wider text-muted transition-all duration-300 hover:text-onyx"
+            className={`font-grotesk text-sm font-semibold uppercase tracking-wider transition-all duration-300 ${
+              onRadar
+                ? "border-b-2 border-onyx pb-1 text-onyx"
+                : "text-muted hover:text-onyx"
+            }`}
           >
             Radar
           </Link>
         </div>
         <a
-          href="#contact"
+          href="/#contact"
           className="bg-onyx px-6 py-3 font-grotesk text-xs font-semibold uppercase tracking-widest text-white transition-all duration-300 hover:bg-emerald sm:px-8 sm:text-sm"
         >
           Partner With Us
