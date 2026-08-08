@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hanken_Grotesk, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import HashScrollHandler from "@/components/HashScrollHandler";
+import ChatBotLoader from "@/components/ChatBot/ChatBotLoader";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin", "vietnamese"],
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body className="font-serif antialiased">
         <HashScrollHandler />
         {children}
+        <ChatBotLoader />
       </body>
     </html>
   );
