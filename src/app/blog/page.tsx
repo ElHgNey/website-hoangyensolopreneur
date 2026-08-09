@@ -26,6 +26,41 @@ const DEFAULT_FILTERS: Filters = {
   search: "",
 };
 
+const TOPICS_COVERED = [
+  "AI workflows and automation",
+  "Prompts, SOPs, and operating systems",
+  "Decision-making and learning with AI",
+  "AI news translated into business meaning",
+];
+
+const CONTENT_PILLARS = [
+  {
+    number: "01",
+    title: "Weekly AI Signal Brief",
+    description: "Short recurring series.",
+  },
+  {
+    number: "02",
+    title: "Meeting, Notes, and Documentation Systems",
+    description: "",
+  },
+  {
+    number: "03",
+    title: "Research and Decision Systems",
+    description: "",
+  },
+  {
+    number: "04",
+    title: "Content and Marketing Workflows",
+    description: "",
+  },
+  {
+    number: "05",
+    title: "Operations and Internal Team Workflows",
+    description: "",
+  },
+];
+
 export default function Home() {
   const [papers, setPapers] = useState<Paper[] | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -138,6 +173,66 @@ export default function Home() {
   return (
     <div className="min-h-screen px-4 py-10 sm:px-8">
       <div className="mx-auto max-w-5xl">
+        <section className="mb-12 border-b border-radar-terracotta/15 pb-10">
+          <span className="mb-4 block font-grotesk text-xs font-semibold uppercase tracking-[0.2em] text-radar-terracotta">
+            The Channel
+          </span>
+          <h1 className="mb-6 max-w-3xl font-grotesk text-2xl font-bold leading-tight tracking-[-0.01em] text-zinc-900 sm:text-4xl">
+            I help busy professionals, solopreneurs, and SMB operators use AI
+            to think more clearly, learn faster, and turn messy work into
+            repeatable systems.
+          </h1>
+          <p className="mb-4 max-w-2xl text-base leading-relaxed text-zinc-600">
+            This channel is for people who actually run things. If you are
+            overwhelmed by tools, tasks, and AI noise, I break AI down into
+            practical workflows, sharper decision systems, and useful
+            takeaways you can apply immediately.
+          </p>
+          <p className="mb-8 max-w-2xl text-base leading-relaxed text-zinc-600">
+            Every video answers one question:{" "}
+            <span className="font-semibold italic text-zinc-900">
+              What does a busy operator need to understand or do next?
+            </span>
+          </p>
+
+          <div className="mb-10">
+            <p className="mb-3 font-grotesk text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              Topics include
+            </p>
+            <ul className="flex flex-wrap gap-2">
+              {TOPICS_COVERED.map((topic) => (
+                <li
+                  key={topic}
+                  className="rounded-full border border-radar-terracotta/25 bg-white px-4 py-1.5 text-sm text-zinc-700"
+                >
+                  {topic}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {CONTENT_PILLARS.map((pillar) => (
+              <div
+                key={pillar.number}
+                className="rounded-xl border border-radar-terracotta/15 bg-white p-5"
+              >
+                <span className="font-grotesk text-sm font-bold text-radar-terracotta">
+                  {pillar.number}
+                </span>
+                <h3 className="mt-2 text-sm font-semibold leading-snug text-zinc-900">
+                  {pillar.title}
+                </h3>
+                {pillar.description && (
+                  <p className="mt-1 text-xs text-zinc-500">
+                    {pillar.description}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
         <FilterBar
           filters={filters}
           onChange={setFilters}
